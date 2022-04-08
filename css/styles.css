@@ -1,0 +1,95 @@
+/* html {
+    box-sizing: border-box;
+    font-family: 'helvetica neue';
+    font-size: 20px;
+    font-weight: 200;
+  } */
+
+body{
+    margin: 0;
+    background: rgba(0,0,0,0.2);
+    
+}
+
+.boxes{
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.box{
+    color: ghostwhite;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 
+                font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+                flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+                background 0.2s;
+    /* transition-timing-function: ease-in-out; */
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.box > *{
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box > *:first-child{
+    transform: translateY(-100%);
+}
+
+.box.open-active > *:first-child{
+    transform: translateY(0);
+}
+
+.box > *:last-child{
+    transform: translateY(100%);
+}
+
+.box.open-active > *:last-child{
+    transform: translateY(0);
+}
+
+.box p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+  }
+
+.box.open {
+    flex: 5;
+    font-size: 40px;
+    
+}
+
+.box1{
+    background-image: url("../assets/spring-leaves.jpg");
+}
+
+.box2{
+    background-image: url("../assets/duck.jpg");
+}
+
+.box3{
+    background-image: url("../assets/ipad-wallpapers-20.jpg");
+}
+
+.box4{
+    background-image: url("../assets/nude.jpg");
+}
+
+.box5{
+    background-image: url("../assets/pipe.jpg");
+}
